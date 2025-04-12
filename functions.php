@@ -34,15 +34,16 @@ function randomName()
 }
 
 
-function randomEmail()
+function randomEmail($name = '')
 {
     $domains = array("gmail.com", "wp.pl", "o2.pl", "onet.pl", "interia.pl", "interia.pl", "gazeta.pl", "poczta.pl");
-    return strtolower(randomName()) . "@" . $domains[array_rand($domains)];
+    $namePart = strtolower(str_replace(' ', '.', $name ?: 'user'));
+    return $namePart . rand(1000, 9999) . '@' . $domains[array_rand($domains)];
 }
 
 function randomPhone()
 {
-    $prefixes = array("600", "601", "602", "603", "604", "605", "606", "607", "608", "609");
+    $prefixes = array("400", "401", "402", "403", "404", "405", "406", "500", "501", "502", "503", "504", "505", "700", "789", "546", "345", "456", "567", "769", "600", "601", "602", "603", "604", "605", "606", "607", "608", "609");
     return $prefixes[array_rand($prefixes)] . rand(100000, 999999);
 }
 function randomStreet()
@@ -123,7 +124,7 @@ function randomOrderTotal()
 {
     return round(rand(20, 100) + rand(0, 99) / 100, 2);
 }
-function randomOrderID()
+function randomOrderId()
 {
-    return rand(1000, 9999);
+    return rand(100000, 999999); // większy zakres, mniejsze ryzyko kolizji
 }
