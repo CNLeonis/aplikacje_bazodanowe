@@ -43,7 +43,7 @@ $conn->close();
 </head>
 
 <body>
-    <h2>Usunięcie danych klientów Pizza Hut</h2>
+    <h2>Usunięcie danych Pizza Hut</h2>
     <a href="index.php">Powrót do formularza</a>
     <footer>
         <p>&copy; 2025 Pizza Hut - Dewid Bielecki</p>

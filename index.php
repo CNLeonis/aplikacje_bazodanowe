@@ -10,12 +10,13 @@
 
 <body>
 
-    <h2>Generator danych klientów Pizza Hut</h2>
+    <h2>Generator danych Pizza Hut</h2>
 
     <ul>
-        <li><a href="form.php">Generuj nowych klientów</a></li>
-        <li><a href="show.php">Pokaż klientów</a></li>
-        <li><a href="delete.php">Usuń klientów</a></li>
+        <li><a href="form.php">Generuj nowe dane</a></li>
+        <li><a href="/show/showCustomers.php">Pokaż klientów</a></li>
+        <li><a href="/show/showAdress.php">Pokaż adresy</a></li>
+        <li><a href="delete.php">Usuń dane</a></li>
     </ul>
     <footer>
         <p>&copy; 2025 Pizza Hut - Dewid Bielecki</p>
