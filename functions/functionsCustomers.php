@@ -26,6 +26,31 @@ function randomName()
         "Patryk",
         "Ewa",
         "Barbara",
+        "Monika",
+        "Dorota",
+        "Marta",
+        "Ewelina",
+        "Justyna",
+        "Klaudia",
+        "Karol",
+        "Łukasz",
+        "Adrian",
+        "Damian",
+        "Marcin",
+        "Sebastian",
+        "Grzegorz",
+        "Rafał",
+        "Mariusz",
+        "Dariusz",
+        "Tadeusz",
+        "Andrzej",
+        "Jan",
+        "Zbigniew",
+        "Jerzy",
+        "Waldemar",
+        "Leszek",
+        "Ryszard",
+        "Kazimierz"
     );
     $surnames = array(
         "Kowalska",
@@ -54,6 +79,50 @@ function randomName()
         "Jasiński",
         "Bąk",
         "Walczak",
+        "Sikora",
+        "Baran",
+        "Wróbel",
+        "Kucharski",
+        "Borkowski",
+        "Czarnecki",
+        "Kubiak",
+        "Majewski",
+        "Sadowski",
+        "Kalinowski",
+        "Pietrzak",
+        "Antoniak",
+        "Błaszczyk",
+        "Bąkowski",
+        "Borkowski",
+        "Błaszczyk",
+        "Bednarski",
+        "Bielawski",
+        "Bielecki",
+        "Bielewicz",
+        "Bielik",
+        "Czajkowski",
+        "Czajka",
+        "Czernik",
+        "Czernicki",
+        "Czernikowski",
+        "Dąbrowski",
+        "Engler",
+        "Falkowski",
+        "Filipek",
+        "Gajda",
+        "Gajewski",
+        "Hajduk",
+        "Hajdukowski",
+        "Hajdukowicz",
+        "Ignaczak",
+        "Ignatowski",
+        "Ignatowicz",
+        "Jabłoński",
+        "Jabłońska",
+
+
+
+
     );
     return $names[array_rand($names)] . " " . $surnames[array_rand($surnames)];
 }
@@ -76,16 +145,11 @@ function randomEmail($name = '')
 }
 function randomPhone()
 {
-    $prefixes = array("400", "401", "402", "403", "404", "405", "406", "500", "501", "502", "503", "504", "505", "700", "789", "546", "345", "456", "567", "769", "600", "601", "602", "603", "604", "605", "606", "607", "608", "609");
+    $prefixes = array("301", "302", "303", "304", "305", "306", "307", "723", "321", "564", "400", "401", "402", "403", "404", "405", "406", "500", "501", "502", "503", "504", "505", "700", "789", "546", "345", "456", "567", "769", "600", "601", "602", "603", "604", "605", "606", "607", "608", "609");
     return $prefixes[array_rand($prefixes)] . rand(100000, 999999);
 }
 
 
-function randomPaymentMethod()
-{
-    $methods = array("Gotówka", "Karta kredytowa", "Przelew bankowy", "Kryptowaluta");
-    return $methods[array_rand($methods)];
-}
 function randomPizzaSize()
 {
     $sizes = array("Mała", "Średnia", "Duża");

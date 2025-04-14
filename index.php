@@ -9,13 +9,17 @@
 </head>
 
 <body>
-
+    <h1>Główna strona </h1>
     <h2>Generator danych Pizza Hut</h2>
 
     <ul>
         <li><a href="form.php">Generuj nowe dane</a></li>
         <li><a href="/show/showCustomers.php">Pokaż klientów</a></li>
         <li><a href="/show/showAdress.php">Pokaż adresy</a></li>
+        <li><a href="/show/showOrders.php">Pokaż zamówienia</a></li>
+        <li><a href="/show/showPayments.php">Pokaż płatności</a></li>
+        <li><a href="/show/showDeliveries.php">Pokaż dostawców</a></li>
+        <li><a href="/show/showDishes.php">Pokaż dania</a></li>
         <li><a href="delete.php">Usuń dane</a></li>
     </ul>
     <footer>

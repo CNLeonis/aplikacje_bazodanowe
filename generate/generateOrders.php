@@ -21,10 +21,11 @@ if ($rows > 0) {
         $stmtInsert = $pdo->prepare("INSERT INTO orders (order_date, order_status, order_type, customer_id) VALUES (?, ?, ?, ?)");
         $stmtInsert->execute([$order_date, $order_status, $order_type, $customer]);
     }
-
+    echo "<br>";
     echo "Generowanie $rows zamówień zakończone sukcesem.";
     echo "<br>";
-    echo "<a href='index.php'>Powrót</a>";
+    echo "<br>";
+    echo "<a href='/../index.php'>Powrót</a>";
     echo "<br>";
     echo "<a href='/../show/showOrders.php'>Pokaż zamówienia</a>";
     echo "<br>";
