@@ -14,7 +14,7 @@ if ($rows > 0) {
 
 
         // dodanie danych do bazy danych
-        $stmt = $pdo->prepare("INSERT INTO customers (name, email, phone) VALUES (?, ?, ?)");
+        $stmt = $pdo->prepare("INSERT IGNORE INTO customers (name, email, phone) VALUES (?, ?, ?)");
         $stmt->execute([$name, $email, $phone]);
     }
     echo "<p>Wygenerowano $rows klientów.</p>";

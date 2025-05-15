@@ -6,11 +6,13 @@ $rows = isset($_POST['rows']) ? (int)$_POST['rows'] : 0;
 
 if ($rows > 0) {
 
+    // pobierz wszystkich klientów raz
+    $customers = $pdo->query("SELECT id_customer FROM customers")->fetchAll(PDO::FETCH_COLUMN);
+
     for ($i = 0; $i < $rows; $i++) {
 
-        //get random customer id
-        $stmt = $pdo->query("SELECT id_customer FROM customers ORDER BY RAND() LIMIT 1");
-        $customer = $stmt->fetchColumn();
+        $customer = $customers[array_rand($customers)];
+
 
         //generate order data base
         $order_date = randomOrderDate();

@@ -7,7 +7,3 @@ create table if not exists orders (
         
     );
 
-    alter table orders
-    add constraint fk_order_delivery
-    foreign key (delivery_id_delivery) references deliveries(id_delivery)
-    on delete cascade on update cascade;

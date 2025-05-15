@@ -20,6 +20,10 @@
         <li><a href="/show/showPayments.php">Pokaż płatności</a></li>
         <li><a href="/show/showDeliveries.php">Pokaż dostawców</a></li>
         <li><a href="/show/showDishes.php">Pokaż dania</a></li>
+        <li><a href="/show/showStorages.php">Pokaż magazyny</a></li>
+        <li><a href="/show/showIngredients.php">Pokaż składniki</a></li>
+        <li><a href="/show/showEmployees.php">Pokaż pracowników</a></li>
+        <li><a href="/show/showReviews.php">Pokaż opinie</a></li>
         <li><a href="delete.php">Usuń dane</a></li>
     </ul>
     <footer>

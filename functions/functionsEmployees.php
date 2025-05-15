@@ -50,42 +50,11 @@ function randomName()
         "Waldemar",
         "Leszek",
         "Ryszard",
-        "Kazimierz",
-        "Mirosław",
-        "Witold",
-        "Cezary",
-        "Marek",
-        "Michał",
-        "Tomasz",
-        "Jakub",
-        "Krzysztof",
-        "Piotr",
-        "Andrzej",
-        "Marcin",
-        "Krzysztof",
-        "Patryk",
-        "Sebastian",
-        "Grzegorz",
-        "Rafał",
-        "Mariusz",
-        "Dariusz",
-        "Tadeusz",
-        "Andrzej",
-        "Jan",
-        "Zbigniew",
-        "Jerzy",
-        "Waldemar",
-        "Leszek",
-        "Ryszard",
-
+        "Kazimierz"
     );
     $surnames = array(
         "Kowalska",
-        "Kowalski",
         "Nowak",
-        "Wiśniewska",
-        "Wójcik",
-        "Kowalczyk",
         "Wiśniewski",
         "Wójcik",
         "Kowalczyk",
@@ -150,14 +119,10 @@ function randomName()
         "Ignatowicz",
         "Jabłoński",
         "Jabłońska",
-        "Jasiński",
-        "Jastrzębski",
-        "Jastrzębska",
-        "Jaworski",
-        "Jaworska",
-        "Jędrzejczyk",
-        "Jędrzejewski",
-        "Jędrzejewska"
+
+
+
+
     );
     return $names[array_rand($names)] . " " . $surnames[array_rand($surnames)];
 }
@@ -165,7 +130,7 @@ function randomName()
 
 function randomEmail($name = '')
 {
-    $domains = array("gmail.com", "wp.pl", "o2.pl", "onet.pl", "interia.pl", "gazeta.pl", "poczta.pl", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "live.com", "mail.com", "zoho.com", "protonmail.com", "tutanota.com", "fastmail.com", "gmx.com", "yandex.com", "aol.com");
+    $domains = array("gmail.com", "wp.pl", "o2.pl", "onet.pl", "interia.pl", "gazeta.pl", "poczta.pl");
 
     if (empty($name)) {
         $namePart = 'user';
@@ -182,4 +147,9 @@ function randomPhone()
 {
     $prefixes = array("301", "302", "303", "304", "305", "306", "307", "723", "321", "564", "400", "401", "402", "403", "404", "405", "406", "500", "501", "502", "503", "504", "505", "700", "789", "546", "345", "456", "567", "769", "600", "601", "602", "603", "604", "605", "606", "607", "608", "609");
     return $prefixes[array_rand($prefixes)] . rand(100000, 999999);
+}
+function randomPosition()
+{
+    $positions = ['Kucharz', 'Kelner', 'Kierownik', 'Zmywak', 'Menadżer'];
+    return $positions[array_rand($positions)];
 }

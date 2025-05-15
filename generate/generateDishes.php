@@ -6,13 +6,11 @@ $rows = isset($_POST['rows']) ? (int)$_POST['rows'] : 0;
 
 if ($rows > 0) {
     for ($i = 0; $i < $rows; $i++) {
-        $name = randomDishName();
-        $price = randomDishPrice();
-        $ingredients = randomIngredients();
-        $category = randomCategory();
+        $dish = randomDish();
+        $price = randomDishPrice($dish['category']);
 
         $stmt = $pdo->prepare("INSERT INTO dishes (name, price, ingredients, category) VALUES (?, ?, ?, ?)");
-        $stmt->execute([$name, $price, $ingredients, $category]);
+        $stmt->execute([$dish['name'], $price, $dish['ingredients'], $dish['category']]);
     }
 
     echo "<p>Wygenerowano $rows dań.</p>";
