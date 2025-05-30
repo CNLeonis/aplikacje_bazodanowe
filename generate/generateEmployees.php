@@ -31,7 +31,7 @@ if ($rows > 0) {
     echo "<br>";
     echo '<a href="/../index.php">Powrót do formularza</a>';
     echo "<br>";
-    echo '<a href="/show/showCustomers.php">Pokaż klientów</a>';
+    echo '<a href="/show/showEmployees.php">Pokaż pracowników</a>';
 } else {
-    echo "<p>Nie podano liczby klientów do wygenerowania.</p>";
+    echo "<p>Nie podano liczby pracowników do wygenerowania.</p>";
 }

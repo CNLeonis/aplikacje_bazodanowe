@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../db.php';
 
-$stmt = $pdo->query("SELECT r.*, c.name AS customer_name FROM reviews r JOIN customers c ON r.id_customer = c.id_customer ORDER BY r.review_date DESC");
+$stmt = $pdo->query("SELECT r.*, c.name AS customer_name FROM reviews r JOIN customers c ON r.customer_id = c.id_customer ORDER BY r.review_date DESC");
 $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -34,7 +34,7 @@ $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tr>
                     <td><?= htmlspecialchars($review['id_review']) ?></td>
                     <td><?= htmlspecialchars($review['customer_name']) ?></td>
-                    <td><?= htmlspecialchars($review['id_order']) ?></td>
+                    <td><?= htmlspecialchars($review['order_id']) ?></td>
                     <td><?= htmlspecialchars($review['rating']) ?>/5</td>
                     <td><?= htmlspecialchars($review['comment']) ?></td>
                     <td><?= htmlspecialchars($review['review_date']) ?></td>

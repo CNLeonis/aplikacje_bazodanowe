@@ -1,161 +1,210 @@
 <!DOCTYPE html>
-
 <html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator danych - Pizza Hut</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
 
-<body>
-    <h2>Generator danych Pizza Hut</h2>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-5">🍕 Generator danych Pizza Hut</h1>
 
-    <h3>Generowanie klientów</h3>
-    <form action="/../generate/generateCustomers.php" method="POST">
-        <label for="rows">Liczba klientów do wygenerowania:</label>
-        <select name="rows" id="rows" required>
-            <option value="50000">50000</option>
-            <option value="10000">10000</option>
-            <option value="5000">5000</option>
-            <option value="1000">1000</option>
-            <option value="100">100</option>
-            <option value="10">10</option>
-        </select>
-        <button type="submit">Generuj klientów</button>
-    </form>
+        <div class="row g-4">
 
-    <hr>
+            <!-- Formularz generatora -->
 
-    <h3>Generowanie zamówień</h3>
-    <form action="/../generate/generateOrders.php" method="POST">
-        <label for="rows">Liczba zamówień do wygenerowania:</label>
-        <select name="rows" id="rows" required>
-            <option value="50000">50000</option>
-            <option value="10000">10000</option>
-            <option value="5000">5000</option>
-            <option value="1000">1000</option>
-            <option value="100">100</option>
-            <option value="10">10</option>
-        </select>
-        <button type="submit">Generuj zamówienia</button>
-    </form>
+            <!-- Klienci -->
+            <div class="col-md-6">
+                <div class="card shadow-sm bg-light border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-person-fill"></i> Generowanie klientów</h5>
+                        <form action="/generate/generateCustomers.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
+                                <option value="50000">50000</option>
+                                <option value="10000">10000</option>
+                                <option value="5000">5000</option>
+                                <option value="1000">1000</option>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj klientów</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-    <hr>
-    <h3>Generowanie płatności</h3>
-    <form action="/../generate/generatePayments.php" method="POST">
-        <label for="rows">Liczba płatności do wygenerowania:</label>
-        <select name="rows" id="rows" required>
-            <option value="50000">50000</option>
-            <option value="10000">10000</option>
-            <option value="5000">5000</option>
-            <option value="1000">1000</option>
-            <option value="100">100</option>
-            <option value="10">10</option>
-        </select>
-        <button type="submit">Generuj płatności</button>
-    </form>
-    <hr>
-    <h3>Generowanie dostawców</h3>
-    <form action="/../generate/generateDeliveries.php" method="POST">
-        <label for="rows">Liczba dostawców do wygenerowania:</label>
-        <select name="rows" id="rows" required>
-            <option value="10">10</option>
-            <option value="100">100</option>
-            <option value="1000">1000</option>
-        </select>
-        <button type="submit">Generuj dostawców</button>
-    </form>
-    <hr>
-    <h3>Generowanie dań</h3>
-    <form action="/generate/generateDishes.php" method="POST">
-        <label for="rows">Liczba dań do wygenerowania:</label>
-        <select name="rows" required>
-            <option value="50000">50000</option>
-            <option value="10000">10000</option>
-            <option value="5000">5000</option>
-            <option value="1000">1000</option>
-            <option value="100">100</option>
-            <option value="10">10</option>
-        </select>
-        <button type="submit">Generuj dania</button>
-    </form>
-    <hr>
+            <!-- Zamówienia -->
+            <div class="col-md-6">
+                <div class="card shadow-sm  border-secondary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi-bag-check"></i> Generowanie zamówień</h5>
+                        <form action="/generate/generateOrders.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
+                                <option value="50000">50000</option>
+                                <option value="10000">10000</option>
+                                <option value="5000">5000</option>
+                                <option value="1000">1000</option>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj zamówienia</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-    <h3>Generowanie adresów</h3>
-    <form action="/../generate/generateAdress.php" method="POST">
-        <label for="rows">Liczba adresów do wygenerowania:</label>
-        <select name="rows" id="rows" required>
-            <option value="10">10</option>
-            <option value="100">100</option>
-            <option value="1000">1000</option>
-            <option value="5000">5000</option>
-            <option value="10000">10000</option>
-            <option value="50000">50000</option>
-        </select>
-        <button type="submit">Generuj adresy</button>
-    </form>
+            <!-- Płatności -->
+            <div class="col-md-6">
+                <div class="card shadow-sm  border-secondary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi-credit-card-2-back"></i> Generowanie płatności</h5>
+                        <form action="/generate/generatePayments.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
+                                <option value="50000">50000</option>
+                                <option value="10000">10000</option>
+                                <option value="5000">5000</option>
+                                <option value="1000">1000</option>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj płatności</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Dostawcy -->
+            <div class="col-md-6">
+                <div class="card shadow-sm bg-light border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi-truck"></i> Generowanie dostawców</h5>
+                        <form action="/generate/generateDeliveries.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
+                                <option value="10000">10000</option>
+                                <option value="1000">1000</option>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj dostawców</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Dania -->
+            <div class="col-md-6">
+                <div class="card shadow-sm bg-light border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-bullseye"></i> Generowanie dań</h5>
+                        <form action="/generate/generateDishes.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
 
+                                <option value="5000">5000</option>
+                                <option value="1000">1000</option>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj dania</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-    <hr>
-    <h3>Generowanie dane magazynowe</h3>
-    <form action="/generate/generateStorages.php" method="POST">
-        <label for="rows">Liczba wpisów magazynowych:</label>
-        <select name="rows" required>
-            <option value="10">10</option>
-            <option value="100">100</option>
-        </select>
-        <button type="submit">Generuj magazyn</button>
-    </form>
-    <hr>
-    <h3>Generuj składniki</h3>
-    <form action="/generate/generateIngredients.php" method="POST">
-        <label for="rows">Liczba składników:</label>
-        <select name="rows" required>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="50">50</option>
-        </select>
-        <button type="submit">Generuj składniki</button>
-    </form>
-    <hr>
-    <h3>Generuj pracowników</h3>
-    <form action="/generate/generateEmployees.php" method="POST">
-        <label for="rows">Liczba pracowników:</label>
-        <select name="rows" required>
-            <option value="200">200</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
+            <!-- Adresy -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-secondary ">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi-geo-alt-fill"></i> Generowanie adresów</h5>
+                        <form action="/generate/generateAdress.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
 
-        </select>
-        <button type="submit">Generuj pracowników</button>
-    </form>
-    <hr>
-    <h3>Generowanie opinii</h3>
-    <form action="/generate/generateReviews.php" method="POST">
-        <label for="rows">Liczba opinii do wygenerowania:</label>
-        <select name="rows" required>
-            <option value="5000">5000</option>
-            <option value="2000">2000</option>
-            <option value="1000">1000</option>
-            <option value="100">100</option>
-            <option value="10">10</option>
-        </select>
-        <button type="submit">Generuj opinie</button>
-    </form>
+                                <option value="5000">5000</option>
+                                <option value="1000">1000</option>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj adresy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Składniki -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-secondary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi-basket"></i> Generowanie składników</h5>
+                        <form action="/generate/generateIngredients.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj składniki</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Pracownicy -->
+            <div class="col-md-6">
+                <div class="card shadow-sm bg-light border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi-person-badge"></i> Generowanie pracowników</h5>
+                        <form action="/generate/generateEmployees.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
+                                <option value="10000">10000</option>
+                                <option value="1000">1000</option>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj pracowników</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Magazyny -->
+            <div class="col-md-6">
+                <div class="card shadow-sm bg-light border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi-box-seam"></i> Generowanie magazynów</h5>
+                        <form action="/generate/generateStorages.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
 
-    <hr>
-    <a href="index.php">Powrót do formularza</a>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj magazyny</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Opinie -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-secondary">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi-chat-left-dots"></i> Generowanie opinii</h5>
+                        <form action="/generate/generateReviews.php" method="POST">
+                            <select name="rows" class="form-select mb-3">
 
-    <footer>
-        <p>&copy; 2025 Pizza Hut - Dewid Bielecki</p>
-    </footer>
+                                <option value="5000">5000</option>
+                                <option value="1000">1000</option>
+                                <option value="100">100</option>
+                                <option value="10">10</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Generuj opinie</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="index.php" class="btn btn-outline-secondary">Powrót do formularza</a>
+                <p class="mt-3 text-muted">&copy; 2025 Pizza Hut - Dewid Bielecki</p>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-
-
 
 </html>

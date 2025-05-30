@@ -24,6 +24,7 @@ $customers = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <th>Imię i nazwisko</th>
                 <th>Email</th>
                 <th>Telefon</th>
+                <th>Adres</th>
             </tr>
         </thead>
         <tbody>
@@ -33,6 +34,7 @@ $customers = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= htmlspecialchars($customer['name']) ?></td>
                     <td><?= htmlspecialchars($customer['email']) ?></td>
                     <td><?= htmlspecialchars($customer['phone']) ?></td>
+                    <td><?= htmlspecialchars($customer['adress_id']) ?></td>
 
                 </tr>
             <?php endforeach; ?>

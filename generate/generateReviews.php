@@ -15,7 +15,7 @@ if ($rows > 0) {
         $rating = randomRating();
         $comment = randomComment();
 
-        $stmtInsert = $pdo->prepare("INSERT INTO reviews (id_customer, id_order, rating, comment) VALUES (?, ?, ?, ?)");
+        $stmtInsert = $pdo->prepare("INSERT INTO reviews (customer_id, order_id, rating, comment) VALUES (?, ?, ?, ?)");
         $stmtInsert->execute([$order['customer_id'], $order['id_order'], $rating, $comment]);
     }
 

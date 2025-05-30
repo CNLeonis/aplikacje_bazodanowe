@@ -30,7 +30,7 @@ $payments = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tr>
                     <td><?= htmlspecialchars($payment['id_payment']) ?></td>
                     <td><?= htmlspecialchars($payment['payment_method']) ?></td>
-                    <td><?= htmlspecialchars($payment['order_id_order']) ?></td>
+                    <td><?= htmlspecialchars($payment['order_id']) ?></td>
 
                 </tr>
             <?php endforeach; ?>

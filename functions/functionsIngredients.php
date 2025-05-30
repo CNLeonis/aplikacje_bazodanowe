@@ -39,7 +39,35 @@ function randomIngredientName()
         "Słodka papryka",
         "Kardamon",
         "Gałka muszkatołowa",
-        "Pietruszka"
+        "Pietruszka",
+        "Boczek",
+        "Szpinak",
+        "Karczochy",
+        "Pomidory suszone",
+        "Pomidory koktajlowe",
+        "Czerwona fasola",
+        "Szparagi",
+        "Gruszka",
+        "Gorgonzola",
+        "Prosciutto",
+        "Chorizo",
+        "Jalapeño świeże",
+        "Czerwona cebula",
+        "Pieczona papryka",
+        "Ricotta",
+        "Ser kozi",
+        "Mango",
+        "Rzeżucha",
+        "Kiełki",
+        "Sos śmietanowy",
+        "Sos serowy",
+        "Sos pomidorowy pikantny",
+        "Kabanos",
+        "Kiełbasa wiejska",
+        "Ogórek konserwowy",
+        "Ogórek świeży",
+
+
 
 
     ];
