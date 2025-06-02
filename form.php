@@ -25,6 +25,7 @@
                         <h5 class="card-title"><i class="bi bi-person-fill"></i> Generowanie klientów</h5>
                         <form action="/generate/generateCustomers.php" method="POST">
                             <select name="rows" class="form-select mb-3">
+                                <option value="100000">100000</option>
                                 <option value="50000">50000</option>
                                 <option value="10000">10000</option>
                                 <option value="5000">5000</option>
@@ -45,6 +46,7 @@
                         <h5 class="card-title"><i class="bi-bag-check"></i> Generowanie zamówień</h5>
                         <form action="/generate/generateOrders.php" method="POST">
                             <select name="rows" class="form-select mb-3">
+                                <option value="100000">100000</option>
                                 <option value="50000">50000</option>
                                 <option value="10000">10000</option>
                                 <option value="5000">5000</option>
@@ -65,6 +67,7 @@
                         <h5 class="card-title"><i class="bi-credit-card-2-back"></i> Generowanie płatności</h5>
                         <form action="/generate/generatePayments.php" method="POST">
                             <select name="rows" class="form-select mb-3">
+                                <option value="100000">100000</option>
                                 <option value="50000">50000</option>
                                 <option value="10000">10000</option>
                                 <option value="5000">5000</option>
@@ -120,7 +123,9 @@
                         <h5 class="card-title"><i class="bi-geo-alt-fill"></i> Generowanie adresów</h5>
                         <form action="/generate/generateAdress.php" method="POST">
                             <select name="rows" class="form-select mb-3">
-
+                                <option value="100000">100000</option>
+                                <option value="50000">50000</option>
+                                <option value="10000">10000</option>
                                 <option value="5000">5000</option>
                                 <option value="1000">1000</option>
                                 <option value="100">100</option>
